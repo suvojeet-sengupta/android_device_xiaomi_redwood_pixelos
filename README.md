@@ -10,6 +10,7 @@ with the 6.18 kernel prebuilt.
 | vendor/xiaomi/redwood | [suvojeet-sengupta/android_vendor_xiaomi_redwood_pixelos](https://github.com/suvojeet-sengupta/android_vendor_xiaomi_redwood_pixelos) `seventeen` |
 | vendor/xiaomi/redwood-miuicamera | [genie1997/redwood_miuicamera](https://github.com/genie1997/redwood_miuicamera) `seventeen` |
 | hardware/dolby | [suvojeet-sengupta/hardware_dolby](https://github.com/suvojeet-sengupta/hardware_dolby) `moto/dolby-dolbyvision` |
+| hardware/redwood-compat | [suvojeet-sengupta/android_hardware_redwood_compat](https://github.com/suvojeet-sengupta/android_hardware_redwood_compat) `seventeen` |
 | hardware/xiaomi | [LineageOS/android_hardware_xiaomi](https://github.com/LineageOS/android_hardware_xiaomi) `lineage-24.0` |
 
 ## Build

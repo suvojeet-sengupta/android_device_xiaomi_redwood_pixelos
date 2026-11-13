@@ -10,4 +10,6 @@
   <project path="vendor/xiaomi/redwood-miuicamera" name="genie1997/redwood_miuicamera" remote="redwood-github" revision="seventeen" clone-depth="1" />
   <project path="hardware/xiaomi" name="LineageOS/android_hardware_xiaomi" remote="redwood-github" revision="lineage-24.0" />
   <project path="hardware/dolby" name="suvojeet-sengupta/hardware_dolby" remote="redwood-github" revision="moto/dolby-dolbyvision" clone-depth="1" />
+  <!-- root-namespace shims hardware/dolby expects (libcodec2_hidl_shim) -->
+  <project path="hardware/redwood-compat" name="suvojeet-sengupta/android_hardware_redwood_compat" remote="redwood-github" revision="seventeen" />
 </manifest>

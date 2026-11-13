@@ -55,6 +55,7 @@ grep -q "redwood-kernel-6.18" device/xiaomi/redwood/BoardConfig.mk ||
     die "no 6.18 kernel in device/xiaomi/redwood-kernel-6.18"
 [ -f vendor/xiaomi/redwood/redwood-vendor.mk ] || die "no vendor blobs in vendor/xiaomi/redwood"
 [ -f hardware/dolby/dolby.mk ] || die "no Dolby in hardware/dolby"
+[ -f hardware/redwood-compat/Android.bp ] || die "no redwood compat shims in hardware/redwood-compat"
 [ -f vendor/xiaomi/redwood-miuicamera/device.mk ] ||
     echo "    note: no MIUI camera in vendor/xiaomi/redwood-miuicamera, building without it"
 
