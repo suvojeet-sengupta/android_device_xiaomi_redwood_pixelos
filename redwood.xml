@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <remote name="redwood-github" fetch="https://github.com" />
+
+  <!-- redwood -->
+  <project path="device/xiaomi/redwood" name="suvojeet-sengupta/android_device_xiaomi_redwood_pixelos" remote="redwood-github" revision="seventeen" />
+  <!-- 6.18.33-Suvkernel, ACK android17-6.18 + the lahaina platform -->
+  <project path="device/xiaomi/redwood-kernel-6.18" name="suvojeet-sengupta/device_xiaomi_redwood-kernel-6.18" remote="redwood-github" revision="main" clone-depth="1" />
+  <project path="vendor/xiaomi/redwood" name="suvojeet-sengupta/android_vendor_xiaomi_redwood_pixelos" remote="redwood-github" revision="seventeen" clone-depth="1" />
+  <project path="vendor/xiaomi/redwood-miuicamera" name="genie1997/redwood_miuicamera" remote="redwood-github" revision="seventeen" clone-depth="1" />
+  <project path="hardware/xiaomi" name="LineageOS/android_hardware_xiaomi" remote="redwood-github" revision="lineage-24.0" />
+  <project path="hardware/dolby" name="suvojeet-sengupta/hardware_dolby" remote="redwood-github" revision="moto/dolby-dolbyvision" clone-depth="1" />
+</manifest>
