@@ -26,8 +26,7 @@ for arg in "$@"; do
     esac
 done
 
-[ -f build/envsetup.sh ] && [ -d vendor/custom ] ||
-    die "run this from the root of a PixelOS tree"
+[ -f build/envsetup.sh ] || die "run this from the root of the ROM tree"
 grep -q "redwood-kernel-6.18" device/xiaomi/redwood/BoardConfig.mk ||
     die "device/xiaomi/redwood isn't the 6.18 device tree, run setup.sh first"
 [ -f device/xiaomi/redwood-kernel-6.18/Image ] || die "no 6.18 kernel prebuilt, run setup.sh first"

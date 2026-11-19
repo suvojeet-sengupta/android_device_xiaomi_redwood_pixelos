@@ -1,8 +1,8 @@
 #!/bin/bash
 #
-# Set up redwood with the 6.18 kernel in a PixelOS (seventeen) tree.
+# Set up redwood with the 6.18 kernel in an Android 17 ROM tree.
 #
-# Run it from the root of a synced PixelOS tree:
+# Run it from the root of a synced ROM tree:
 #   ~/redwood-pixelos-setup/setup.sh
 #
 # It adds the redwood local manifest, syncs the redwood repos and checks that
@@ -18,8 +18,7 @@ LOCAL=.repo/local_manifests/redwood.xml
 die() { echo "setup: $*" >&2; exit 1; }
 
 [ -d .repo ] && [ -f build/envsetup.sh ] ||
-    die "run this from the root of a synced PixelOS tree"
-[ -d vendor/custom ] || die "no vendor/custom here: this isn't a PixelOS tree"
+    die "run this from the root of a synced ROM tree"
 
 echo "==> Adding the redwood local manifest"
 mkdir -p .repo/local_manifests
@@ -49,8 +48,6 @@ repo sync -c --no-tags --force-sync -j"$(nproc --all)" $paths
 
 grep -q "redwood-kernel-6.18" device/xiaomi/redwood/BoardConfig.mk ||
     die "device/xiaomi/redwood isn't the 6.18 device tree; check $LOCAL"
-[ -f device/xiaomi/redwood/custom_redwood.mk ] ||
-    die "device/xiaomi/redwood has no PixelOS product (custom_redwood.mk)"
 [ -f device/xiaomi/redwood-kernel-6.18/Image ] ||
     die "no 6.18 kernel in device/xiaomi/redwood-kernel-6.18"
 [ -f vendor/xiaomi/redwood/redwood-vendor.mk ] || die "no vendor blobs in vendor/xiaomi/redwood"
